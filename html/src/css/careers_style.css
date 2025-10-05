@@ -1,0 +1,97 @@
+/* careers_style.css (Estilos para a tela de Carreiras - Dark Mode/Glassmorphism) */
+
+/* --- LAYOUT E CABEÇALHO --- */
+.main-header {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.main-header h1 {
+    color: white;
+    font-size: 32px;
+    margin-bottom: 5px;
+}
+
+.main-header p {
+    color: #a4a4fd; /* Roxo claro para o subtítulo */
+    font-size: 16px;
+}
+
+/* --- GRID E CARDS DE CARREIRA (Glassmorphism) --- */
+.career-grid {
+    display: grid;
+    /* Layout em 3 colunas, mas responsivo */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.career-card {
+    /* Glassmorphism Sutil para o Card */
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    color: white;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.career-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(138, 43, 226, 0.4); /* Sombra roxa no hover */
+}
+
+.card-icon {
+    font-size: 36px;
+    margin-bottom: 15px;
+    color: #4facfe; /* Azul claro para o ícone */
+}
+
+.card-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.card-description {
+    color: #e0e0e0;
+    font-size: 14px;
+    flex-grow: 1; /* Faz o parágrafo preencher o espaço, alinhando os botões */
+    margin-bottom: 15px;
+}
+
+.card-status {
+    display: inline-block;
+    background: #8A2BE2; /* Roxo */
+    color: white;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    align-self: flex-start;
+}
+
+/* --- BOTÃO DE AÇÃO (DEGRADÊ) --- */
+.btn-view-details {
+    /* O SEU DEGRADÊ ROXO/AZUL FAVORITO */
+    background: linear-gradient(45deg, #1d2b64, #8A2BE2);
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    transition: opacity 0.3s;
+    margin-top: 10px; /* Garante espaço após a descrição */
+}
+
+.btn-view-details:hover {
+    opacity: 0.9;
+}

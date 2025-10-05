@@ -1,0 +1,197 @@
+/* chat_style.css (Dark Mode, Glassmorphism, Degradê Roxo/Azul) */
+
+/* --- LAYOUT GERAL DO CHAT (Glassmorphism no Contêiner Principal) --- */
+.main-content {
+    background: none;
+}
+
+.chat-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    /* NOVO ESTILO: Container principal Glassmorphism (efeito vidro fosco) */
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    max-width: 1000px;
+    margin: 0 auto;
+    min-height: calc(100vh - 40px);
+    color: white; /* Texto principal em branco */
+}
+
+.chat-interface {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    /* Fundo escuro sutil dentro do container */
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* --- TÍTULO SUPERIOR (Estilo Limpo) --- */
+.chat-header-title p {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 36px;
+    color: white; /* Título em branco */
+    text-align: center;
+    padding: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: transparent; /* Transparente para ver o Glassmorphism */
+}
+
+/* --- INFO DO CONTATO (HEADER FIXO) --- */
+.contact-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    /* Fundo escuro para contraste */
+    background-color: rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    flex-shrink: 0;
+}
+
+.contact-avatar {
+    /* MANTÉM O TAMANHO E O FORMATO DO CÍRCULO */
+    width: 40px;
+    height: 40px;
+    background-color: #8A2BE2; /* Roxo (Fundo de segurança caso a imagem não carregue) */
+    border-radius: 50%;
+    margin-right: 10px;
+    /* CHAVE: Garante que a imagem fique dentro do círculo */
+    overflow: hidden;
+
+    /* Configurações removidas (pois não há mais texto "AS") */
+    /* display: flex; justify-content: center; align-items: center; */
+}
+
+.contact-avatar img {
+    /* Garante que a imagem preencha o círculo sem deformar */
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Recorta a imagem para caber no círculo */
+}
+
+.contact-name {
+    font-weight: bold;
+    color: white;
+    display: block;
+    font-size: 16px;
+}
+
+.contact-status.online {
+    color: #28a745;
+}
+
+.action-btn {
+    /* Botões de Ação Glassmorphism */
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #a4a4fd; /* Roxo claro */
+    transition: all 0.3s;
+}
+.action-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* --- ÁREA DE MENSAGENS (Scrollable) --- */
+.messages-area {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.message {
+    max-width: 75%;
+    padding: 10px 15px;
+    border-radius: 15px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.timestamp {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* ESTILO MENTOR (Esquerda - Dark/Glassmorphism Sutil) */
+.message.mentor {
+    align-self: flex-start;
+    /* Fundo sutil para o mentor */
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    border-bottom-left-radius: 3px;
+}
+
+/* ESTILO USUÁRIO (Direita - DEGRADÊ ROXO/AZUL) */
+.message.user {
+    align-self: flex-end;
+    /* O seu degradê vibrante */
+    background: linear-gradient(90deg, #1d2b64, #8A2BE2);
+    color: white;
+    border-bottom-right-radius: 3px;
+    box-shadow: 0 4px 10px rgba(138, 43, 226, 0.4);
+}
+
+/* --- CAMPO DE DIGITAÇÃO --- */
+.message-input-area {
+    display: flex;
+    padding: 15px 20px;
+    /* Fundo escuro sólido */
+    background-color: rgba(0, 0, 0, 0.5);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    flex-shrink: 0;
+    align-items: center;
+}
+
+.message-input-area input[type="text"] {
+    flex-grow: 1;
+    padding: 12px 18px;
+    /* Input estilo Glassmorphism/Dark */
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 25px;
+    color: white;
+    font-size: 14px;
+    margin-right: 10px;
+}
+/* Placeholder mais visível */
+.message-input-area input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.send-btn {
+    /* Botão Enviar com o degradê */
+    background: linear-gradient(45deg, #1d2b64, #8A2BE2);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 20px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: opacity 0.3s;
+    font-size: 14px;
+}
+
+/* --- RODAPÉ/STATUS --- */
+.chat-footer-status {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 20px;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(0, 0, 0, 0.5);
+    flex-shrink: 0;
+}
+
+.session-status {
+    color: #a4a4fd; /* Roxo claro para o status ativo */
+    font-weight: 500;
+}

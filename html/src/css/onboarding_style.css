@@ -1,0 +1,184 @@
+/* onboarding_style.css (Estilos FINAIS: Escolha de Papel MODERNA/VIBRANTE e Sucesso Legível) */
+
+/* --- AJUSTES GERAIS DO CONTAINER (Glassmorphism e Fundo Escuro) --- */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.onboarding-container {
+    /* Glassmorphism: Fundo semi-transparente escurecido */
+    background: rgba(116, 5, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+    color: #49079a;
+}
+
+.onboarding-container h1 {
+    color: white;
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    color: #a5f3fc;
+    margin-bottom: 30px;
+    font-size: 15px;
+}
+
+.onboarding-step.hidden {
+    display: none;
+}
+
+/* --- REDESIGN MODERNO/VIBRANTE: ESCOLHA DE PAPEL (#step-role) --- */
+
+.role-options {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+    flex-direction: column;
+}
+
+.role-card {
+    flex: 1;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    /* Fundo escuro com borda sutil */
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.role-card:hover {
+    background: rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+}
+
+.role-card.selected {
+    /* GRADIENTE AZUL E ROXO NO CARD SELECIONADO */
+    border-color: #8A2BE2; /* Roxo */
+    background: linear-gradient(135deg, #1d2b64, #8A2BE2);
+    box-shadow: 0 6px 15px rgba(138, 43, 226, 0.3);
+}
+
+.role-card h2 {
+    color: white;
+    font-size: 1.4em;
+    margin-bottom: 5px;
+}
+
+.role-card p, .role-card ul li {
+    color: #e0e0e0;
+    font-size: 0.9em;
+    line-height: 1.4;
+}
+
+.checkmark {
+    color: #4facfe; /* Azul claro para o checkmark */
+}
+
+.small-text {
+    font-size: 0.8em;
+    margin-top: 10px;
+    color: #e0e0e0;
+}
+
+/* BOTÃO DE CONTINUAR (Design Gradiente) */
+#continue-role {
+    background: linear-gradient(45deg, #4facfe, #8A2BE2);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    width: 100%;
+    font-weight: bold;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+#continue-role:hover {
+    opacity: 0.9;
+}
+
+
+/* --- TELA DE SUCESSO (#step-success) - MANTENDO ALTO CONTRASTE E LEGIBILIDADE --- */
+
+/* --- ESTILOS DE SUCESSO (#step-success) --- */
+
+.success-header {
+    margin-bottom: 20px;
+    /* Adicionando as propriedades de centralização aqui: */
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+}
+
+.success-icon {
+    /* Cor do ícone mantida para o contraste */
+    color: white;
+    background-color: #28a745;
+    /* A propriedade abaixo é a que deixa o elemento redondo */
+    border-radius: 50%;
+    border: 5px solid #d4edda;
+
+    /* Estas propriedades garantem que o 'check' esteja centralizado dentro do círculo */
+    font-size: 40px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* BOX DE INFORMAÇÕES DO USUÁRIO - FUNDO CLARO PARA LEITURA */
+.user-info-box {
+    background: linear-gradient(135deg, #1d2b64, #2b56e2);
+    color: #333;
+    border-radius: 12px;
+    padding: 15px 20px;
+    margin-bottom: 30px;
+    text-align: left;
+}
+.user-name, .user-avatar { color: #bc9cff; font-family: "Arial Black" }
+.user-email, .status-text { color: #a4a4fd; font-family: "Arial Rounded MT Bold" }
+.user-detail { border-bottom: 1px solid #dee2f7; }
+
+/* CARDS DE PRÓXIMOS PASSOS - FUNDO CLARO PARA LEITURA */
+.next-steps-cards h2 {
+    color: white; /* Título h2 sobre o fundo escuro */
+}
+.step-card {
+    background: linear-gradient(135deg, #1d2b64, #2b49e2);
+    border: 1px solid #ddd;
+    color: #c71919;
+}
+.step-card h4 { color: #bc9cff; font-family: "Arial Black" }
+.step-card p { color: #999; }
+.step-icon { color: #007bff; }
+
+/* BOTÃO FINAL */
+.journey-button {
+    /* Mantém o gradiente para o botão final */
+    background: linear-gradient(45deg, #1d2b64, #4facfe);
+    color: white;
+    border: none;
+    font-size: 16px;
+    padding: 12px 20px;
+    width: 100%;
+    margin-top: 25px;
+    border-radius: 12px;
+}
+
+.footer-text {
+    color: #e0e0e0;
+}

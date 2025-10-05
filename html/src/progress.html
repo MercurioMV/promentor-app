@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progresso | ProMentor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home_style.css">
+    <link rel="stylesheet" href="css/progress_style.css">
+</head>
+<body>
+
+<div class="app-layout">
+
+    <aside class="sidebar">
+        <nav class="sidebar-nav">
+            <a href="home.html" class="nav-item"><span>📊</span> Dashboard</a>
+            <a href="chat.html" class="nav-item"><span>💬</span> Chat</a>
+            <a href="careers.html" class="nav-item"><span>💼</span> Carreiras</a>
+            <a href="progress.html" class="nav-item active"><span>📈</span> Progresso</a> <a href="settings.html" class="nav-item"><span>⚙️</span> Configurações</a>
+            <a href="#" class="nav-item"><span>👤</span> Perfil</a>
+        </nav>
+    </aside>
+
+    <div class="main-content">
+        <header class="progress-header-title">
+            <p>Progresso pessoal</p>
+        </header>
+
+        <div class="progress-interface-container">
+
+            <header class="main-header">
+                <h1>Meu Progresso</h1>
+                <p>Acompanhe sua evolução e conquistas</p>
+            </header>
+
+            <section class="summary-metrics">
+                <div class="metric-card">
+                    <div class="icon-value">
+                        <span class="metric-icon">🕒</span>
+                        <span class="metric-value">124h</span>
+                    </div>
+                    <span class="metric-title">Horas Totais</span>
+                    <span class="metric-detail">+12h esta semana</span>
+                </div>
+
+                <div class="metric-card">
+                    <div class="icon-value">
+                        <span class="metric-icon">📖</span>
+                        <span class="metric-value">8</span>
+                    </div>
+                    <span class="metric-title">Cursos Concluídos</span>
+                    <span class="metric-detail">+2 este mês</span>
+                </div>
+
+                <div class="metric-card">
+                    <div class="icon-value">
+                        <span class="metric-icon">🏅</span>
+                        <span class="metric-value">5</span>
+                    </div>
+                    <span class="metric-title">Certificados</span>
+                    <span class="metric-detail">+1 esta semana</span>
+                </div>
+
+                <div class="metric-card">
+                    <div class="icon-value">
+                        <span class="metric-icon">🎯</span>
+                        <span class="metric-value">15 dias</span>
+                    </div>
+                    <span class="metric-title">Streak Atual</span>
+                    <span class="metric-detail">Melhor: 23 dias</span>
+                </div>
+            </section>
+
+            <nav class="progress-tabs">
+                <button class="tab-btn active">Cursos</button>
+                <button class="tab-btn">Metas</button>
+                <button class="tab-btn">Conquistas</button>
+            </nav>
+
+            <section class="progress-details-list">
+
+                <div class="course-progress-card">
+                    <h3 class="course-title">JavaScript Avançado</h3>
+                    <p class="mentor-info">Mentor: Dr. Ana Silva</p>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" style="width: 85%;"></div>
+                        <span class="progress-percentage">85%</span>
+                    </div>
+                    <div class="progress-footer">
+                        <span class="time-status">Progresso: 32h / 40h</span>
+                        <span class="next-module">Próximo: Promises e Async/Await</span>
+                    </div>
+                </div>
+
+                <div class="course-progress-card completed">
+                    <h3 class="course-title">React Fundamentals</h3>
+                    <p class="mentor-info">Mentor: Prof. Carlos Santos</p>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" style="width: 100%;"></div>
+                        <span class="progress-percentage">100%</span>
+                    </div>
+                    <div class="progress-footer">
+                        <span class="time-status">Progresso: 24h / 24h</span>
+                        <span class="next-module">Curso Concluído ✅</span>
+                    </div>
+                </div>
+
+                <div class="course-progress-card">
+                    <h3 class="course-title">UX Design</h3>
+                    <p class="mentor-info">Mentor: A definir</p>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" style="width: 45%;"></div>
+                        <span class="progress-percentage">45%</span>
+                    </div>
+                    <div class="progress-footer">
+                        <span class="time-status">Progresso: 9h / 20h</span>
+                        <span class="next-module">Próximo: Testes de Usabilidade</span>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

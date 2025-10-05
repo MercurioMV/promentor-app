@@ -1,0 +1,198 @@
+/* No topo do seu arquivo CSS base (ex: style.css) */
+@import url('https://fonts.googleapis.com/css2?family=Brush+Script+MT&family=Montserrat:wght@400;600;700&display=swap');
+
+/* Agora, aplique a fonte ao corpo do aplicativo */
+body {
+    /* O seu fundo degradê azul escuro original */
+    background: linear-gradient(135deg, #1d2b64, #4facfe);
+    min-height: 100vh;
+    margin: 0;
+
+    /* Aplica a fonte moderna como padrão para todo o texto */
+    font-family: 'Montserrat', sans-serif;
+    color: #e0e0e0; /* Cor de texto padrão clara */
+}
+
+/* ... O restante do seu CSS base segue aqui ... */
+.progress-header-title {
+    text-align: center;
+    padding: 10px;
+}
+.progress-header-title p {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 36px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+/* --- CONTAINER INTERFACE (Glassmorphism Central) --- */
+.progress-interface-container {
+    /* Glassmorphism como contêiner central da interface */
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+.main-header {
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+}
+.main-header h1 {
+    color: white;
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+.main-header p {
+    color: #a4a4fd;
+    font-size: 14px;
+}
+
+/* --- 1. MÉTRICAS DE RESUMO (Cards Glassmorphism) --- */
+.summary-metrics {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.metric-card {
+    /* Fundo dos cards de métricas */
+    background: rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.icon-value {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.metric-icon {
+    font-size: 24px;
+    color: #a4a4fd; /* Ícone em roxo claro */
+}
+
+.metric-value {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+.metric-title {
+    display: block;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.metric-detail {
+    display: block;
+    font-size: 11px;
+    color: #28a745; /* Cor verde para destaque positivo */
+    margin-top: 5px;
+}
+
+/* --- 2. NAVEGAÇÃO POR ABAS --- */
+.progress-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tab-btn {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.7);
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s;
+}
+
+.tab-btn.active {
+    color: white;
+    /* Degradê de destaque na aba ativa */
+    border-image: linear-gradient(to right, #1d2b64, #8A2BE2);
+    border-image-slice: 1;
+}
+.tab-btn:hover {
+    color: white;
+}
+
+
+/* --- 3. DETALHES DO CURSO (Cartões Glassmorphism) --- */
+.progress-details-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.course-progress-card {
+    /* Fundo dos cards de curso */
+    background: rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.course-progress-card.completed {
+    border-left: 5px solid #28a745; /* Borda verde para cursos concluídos */
+}
+
+.course-title {
+    font-size: 16px;
+    color: white;
+    margin-bottom: 3px;
+}
+
+.mentor-info {
+    font-size: 12px;
+    color: #a4a4fd;
+    margin-bottom: 10px;
+}
+
+.progress-bar-container {
+    background: rgba(255, 255, 255, 0.1);
+    height: 10px;
+    border-radius: 5px;
+    position: relative;
+    margin-bottom: 5px;
+}
+
+.progress-bar {
+    height: 100%;
+    /* O SEU DEGRADÊ NO PROGRESSO */
+    background: linear-gradient(90deg, #1d2b64, #8A2BE2);
+    border-radius: 5px;
+    transition: width 0.5s;
+}
+
+.progress-percentage {
+    position: absolute;
+    right: 0;
+    top: -20px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+}
+
+.progress-footer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    margin-top: 10px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.next-module {
+    color: #4facfe; /* Azul claro para o próximo passo */
+}

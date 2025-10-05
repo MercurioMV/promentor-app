@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | ProMentor</title>
+    <link rel="stylesheet" href="css/home_style.css">
+</head>
+<body>
+
+<div class="app-layout">
+
+    <aside class="sidebar">
+        <header class="sidebar-header">
+            <img src="assets/logo.jpg" alt="Logo ProMentor" class="logo-sidebar">
+            <h3>ProMentor</h3>
+        </header>
+
+        <nav class="sidebar-nav">
+            <a href="dashboard_content.html" class="nav-item nav-item-link active" data-target-url="dashboard_content.html"><span>📊</span> Dashboard</a>
+            <a href="chat.html" class="nav-item nav-item-link" data-target-url="chat.html"><span>💬</span> Chat</a>
+            <a href="careers.html" class="nav-item nav-item-link" data-target-url="careers.html"><span>💼</span> Carreiras</a>
+            <a href="progress.html" class="nav-item nav-item-link" data-target-url="progress.html"><span>📈</span> Progresso</a>
+            <a href="settings.html" class="nav-item nav-item-link" data-target-url="settings.html"><span>⚙️</span> Configurações</a>
+            <a href="#" class="nav-item"><span>👤</span> Perfil</a>
+        </nav>
+        <div class="sidebar-footer">
+            <p>&copy; 2024 ProMentor</p>
+        </div>
+    </aside>
+
+    <div class="main-content">
+
+        <div class="dashboard-grid">
+
+            <section class="col-esquerda">
+
+                <div class="card card-saudacao">
+                    <h2>Bem-vindo de volta, <span id="usuario-nome">Usuário</span>!</h2>
+                    <p>Continue sua jornada de aprendizado e desenvolvimento profissional.</p>
+
+                    <div class="stats-resumo">
+                        <div class="stat-item"><span class="stat-valor">24h</span><span class="stat-label">Horas de Mentoria</span></div>
+                        <div class="stat-item"><span class="stat-valor">8</span><span class="stat-label">Cursos Concluídos</span></div>
+                        <div class="stat-item"><span class="stat-valor">75%</span><span class="stat-label">Meta Mensal</span></div>
+                    </div>
+                </div>
+
+                <div class="card card-proximas-sessoes">
+                    <h3>Próximas Sessões</h3>
+                    <div class="sessao-item">
+                        <p class="sessao-nome">Dr. Ana Silva <span class="badge hoje">Hoje</span></p>
+                        <span class="sessao-detalhe">Engenharia de Software</span>
+                        <span class="sessao-horario">14:00</span>
+                    </div>
+                    <div class="sessao-item">
+                        <p class="sessao-nome">Prof. Carlos Santos <span class="badge amanha">Amanhã</span></p>
+                        <span class="sessao-detalhe">Ciência de Dados</span>
+                        <span class="sessao-horario">10:30</span>
+                    </div>
+                    <button class="botao-primario">Agendar Nova Sessão</button>
+                </div>
+
+                <div class="card card-progresso-mes">
+                    <h3>Progresso do Mês</h3>
+                    <p>Acompanhe suas conquistas mensais</p>
+
+                    <div class="progresso-item">
+                        <label>Horas de Estudo (18/24h)</label>
+                        <div class="barra-progresso">
+                            <div class="progresso-preenchimento" style="width: 75%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="progresso-item">
+                        <label>Módulos Completados (6/8)</label>
+                        <div class="barra-progresso">
+                            <div class="progresso-preenchimento" style="width: 80%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="progresso-item">
+                        <label>Exercícios Práticos (12/15)</label>
+                        <div class="barra-progresso">
+                            <div class="progresso-preenchimento" style="width: 85%;"></div>
+                        </div>
+                    </div>
+
+                    <button class="botao-secundario">Ver Relatório Completo</button>
+                </div>
+            </section>
+
+            <section class="col-direita">
+
+                <div class="card card-atividades-recentes">
+                    <h3>Atividades Recentes</h3>
+                    <p>Suas últimas interações na plataforma</p>
+
+                    <div class="atividade-item">
+                        <p>Completou módulo: <strong>Fundamentos de Python</strong></p>
+                        <span class="atividade-tempo">2h atrás</span>
+                    </div>
+                    <div class="atividade-item">
+                        <p>Chat finalizado: Sessão com Dr. Ana Silva</p>
+                        <span class="atividade-tempo">1 dia atrás</span>
+                    </div>
+                    <div class="atividade-item">
+                        <p>Área explorada: Explorou Administração (78% compatibilidade)</p>
+                        <span class="atividade-tempo">2 dias atrás</span>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="javascript/home_script.js"></script>
+
+</body>
+</html>

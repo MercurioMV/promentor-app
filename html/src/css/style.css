@@ -1,0 +1,153 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Fundo fluido com degradê */
+body {
+    background: linear-gradient(135deg, #1d2b64, #2a5298, #53cce5);
+    background-size: 400% 400%;
+    animation: gradientFlow 15s ease infinite;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Animação do fundo */
+@keyframes gradientFlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Container */
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 18px;
+    width: 350px;
+    text-align: center;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-3px);
+}
+
+/* Logo */
+.logo {
+    width: 100px;          /* tamanho da logo */
+    margin-bottom: 15px;   /* espaço abaixo dela */
+    border-radius: 12px;   /* opcional, se quiser bordas arredondadas */
+}
+
+
+/* Títulos */
+h1 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    background: linear-gradient(45deg, #6dd5ed, #fbc2eb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+p {
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: #e0e0e0;
+}
+
+label {
+    display: block; /* Faz o label ficar em uma linha só, acima do input */
+    margin-bottom: 6px; /* Espaço entre o label e o input */
+    font-weight: bold;
+    color: #fff; /* ou a cor que preferir */
+}
+
+/* Inputs */
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.15);
+    caret-color: #00f2fe;
+    outline: none;
+    transition: 0.3s;
+}
+
+input::placeholder {
+    color: #d5d5d5;
+}
+
+input:focus {
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 0 8px rgba(109, 213, 237, 0.6);
+}
+
+/* Botões */
+button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border: none;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Botão "Entrar" */
+.entrar {
+    background: linear-gradient(45deg, #4facfe, #00f2fe);
+    color: #fff;
+}
+
+.entrar:hover {
+    background: linear-gradient(45deg, #00f2fe, #4facfe);
+    transform: scale(1.03);
+}
+
+/* Links */
+a {
+    color: #a5f3fc;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: #fff;
+}
+
+/* --- ANIMAÇÃO PARA TRANSIÇÃO DE CONTEÚDO (FADE-IN & SLIDE-UP) --- */
+
+/* 1. Define o efeito de animação */
+@keyframes fadeInSlideUp {
+    0% {
+        /* Ponto inicial: Totalmente transparente e ligeiramente abaixo (20px) */
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        /* Ponto final: Totalmente visível e na posição correta */
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 2. Aplica a animação ao conteúdo principal */
+.main-content {
+    /* Garante que o conteúdo que acabou de carregar use a animação */
+    animation: fadeInSlideUp 0.6s ease-out forwards;
+}
